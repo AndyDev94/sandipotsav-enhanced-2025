@@ -1,0 +1,17 @@
+SANDIPOTSAV 2025 - Live Stream Component Guide
+=========================================
+
+Location: components/live-stream.tsx
+
+1. Component Purpose
+------------------
+Displays a YouTube live stream button and modal for the Cultural Night event.
+
+2. Configuration
+--------------
+IMPORTANT: Update the YouTube embed URL before the event!
+
+Current location:
+```tsx
+src="https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxxxxx"
+

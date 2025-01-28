@@ -1,0 +1,51 @@
+SANDIPOTSAV 2025 - Animated Title Component Guide
+===============================================
+
+Location: components/animated-title.tsx
+
+1. Component Purpose
+------------------
+The AnimatedTitle component displays the main "SANDIPOTSAV 2025" text in the center of the rotating circle loader on the home page.
+
+2. Key Features
+-------------
+- Centered text positioning
+- Glitch animation effects
+- Responsive text sizing
+- Perfect alignment with circular loader
+
+3. Customization Options
+----------------------
+a) Text Size:
+   - Modify text-xl/text-2xl classes for different sizes
+   - Current sizes:
+     * SANDIPOTSAV: text-xl md:text-2xl
+     * 2025: text-lg md:text-xl
+
+b) Colors:
+   - Title gradient: from-[#D8B4FE] to-[#8B5CF6]
+   - Text shadow: rgba(255,255,255,0.7)
+
+c) Animations:
+   - Glitch effects defined in globals.css
+   - Entrance animation duration: 1000ms
+
+4. Important Notes
+----------------
+- Component must remain within 400x400px container
+- Text is absolutely positioned for perfect centering
+- Uses custom font defined in font-title class
+
+5. Making Changes
+---------------
+a) To change text content:
+   - Locate the span elements
+   - Update text content directly
+
+b) To adjust positioning:
+   - Modify transform translate values
+   - Adjust padding/margin as needed
+
+c) To change animations:
+   - Edit animate-glitch-1 and animate-glitch-2 in globals.css
+

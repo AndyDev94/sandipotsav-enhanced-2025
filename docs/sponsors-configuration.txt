@@ -1,0 +1,49 @@
+SANDIPOTSAV 2025 - Sponsors Configuration Guide
+=========================================
+
+Location: app/sandipotsav/sponsors/page.tsx
+
+1. Adding/Modifying Sponsors
+--------------------------
+const sponsorLevels = [
+  {
+    level: "Title Sponsors",
+    sponsors: [
+      {
+        name: "Sponsor Name",
+        description: "Description",
+        logo: "/path/to/logo.png",
+        website: "https://sponsor-website.com"
+      }
+    ]
+  }
+]
+
+2. Sponsor Image Guidelines
+------------------------
+- Format: PNG/JPG/WebP
+- Size: 200x100px minimum
+- Resolution: 2x for retina displays
+- Location: public/sponsors/
+- Optimization: Use Next.js Image component
+
+3. Sponsor Levels
+---------------
+Current levels:
+- Title Sponsors
+- Platinum Sponsors
+- Gold Sponsors
+- Silver Sponsors
+
+To add new level:
+1. Add new object to sponsorLevels array
+2. Update styling if needed
+3. Add corresponding logos
+
+4. Click Handling
+---------------
+- All sponsor cards are clickable
+- Links open in new tab
+- Add UTM parameters for tracking
+- Verify all URLs before deployment
+

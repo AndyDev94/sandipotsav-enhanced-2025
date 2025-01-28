@@ -1,0 +1,64 @@
+SANDIPOTSAV 2025 - Notifications Guide
+=====================================
+
+This guide explains how to add and manage notifications on the website.
+
+1. Adding New Notifications
+--------------------------
+Navigate to components/notifications.tsx and locate the notifications array.
+Add new notifications in the following format:
+
+{
+  id: "unique_id",        // Unique identifier for the notification
+  title: "Title Here",    // Main notification title
+  message: "Message",     // Detailed notification message
+  date: "YYYY-MM-DD",    // Date in ISO format
+  isNew: true/false      // Whether to show the "New" badge
+}
+
+Example:
+{
+  id: "4",
+  title: "Event Registration Open!",
+  message: "Register now for the Dance Competition.",
+  date: "2024-03-26",
+  isNew: true
+}
+
+2. Notification Types
+-------------------
+- Regular notifications: Basic announcements
+- New notifications: Set isNew: true to show the red dot indicator
+- Time-sensitive: Add time-sensitive information in the message
+
+3. Best Practices
+---------------
+- Keep titles concise (max 50 characters)
+- Write clear, actionable messages
+- Add most recent notifications at the top
+- Remove isNew flag after 48 hours
+- Limit active notifications to 5-7 at a time
+- Include relevant dates and times in messages
+
+4. Managing Notifications
+-----------------------
+- Regularly review and remove outdated notifications
+- Update isNew flags periodically
+- Keep the notifications array clean and organized
+- Test notification display on both mobile and desktop
+
+5. Technical Notes
+----------------
+- Notifications are client-side only
+- Uses Framer Motion for animations
+- Integrates with the site's theme
+- Responsive design for all screen sizes
+
+6. Future Improvements
+--------------------
+- Add notification categories
+- Implement read/unread status
+- Add notification persistence
+- Include notification images
+- Add notification sound effects
+

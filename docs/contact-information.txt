@@ -1,0 +1,50 @@
+SANDIPOTSAV 2025 - Contact Information Configuration
+=============================================
+
+Location: app/sandipotsav/contact/page.tsx
+
+1. Contact Details
+----------------
+const contactInfo = [
+  {
+    icon: <Phone />,
+    title: "Phone",
+    details: [
+      "+91 (2594) 222513", // Update phone numbers
+      "+91 (2594) 222514"
+    ]
+  },
+  {
+    icon: <Mail />,
+    title: "Email",
+    details: [
+      "info@sandipuniversity.edu.in", // Update email addresses
+      "admissions@sandipuniversity.edu.in"
+    ]
+  }
+]
+
+2. Google Maps Integration
+-----------------------
+Update iframe src with your location:
+src="https://www.google.com/maps/embed?pb=..."
+
+To get new embed URL:
+1. Go to Google Maps
+2. Find your location
+3. Click Share > Embed map
+4. Copy iframe src URL
+
+3. Form Submission
+---------------
+Currently simulated with timeout.
+To implement real form submission:
+1. Create API route in app/api/contact/route.ts
+2. Update handleSubmit function
+3. Add error handling
+4. Set up email notifications
+
+4. Social Media Links
+------------------
+Update in components/footer.tsx
+

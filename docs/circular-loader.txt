@@ -1,0 +1,51 @@
+SANDIPOTSAV 2025 - Circular Loader Component Guide
+===============================================
+
+Location: components/circular-loader.tsx
+
+1. Component Purpose
+------------------
+The CircularLoader creates an animated spinning circle that serves as the main visual element on the home page.
+
+2. Technical Details
+-----------------
+- Uses HTML Canvas for rendering
+- Implements requestAnimationFrame for smooth animation
+- Size: 400x400 pixels
+- Colors: Golden (#FDB61A) with glow effect
+
+3. Customization Options
+----------------------
+a) Size:
+   - Change canvas.width and canvas.height values
+   - Default: 400px x 400px
+
+b) Colors:
+   - Main color: #FDB61A (golden)
+   - Glow color: Same as main color
+   - Outer ring: #ffffff
+
+c) Animation:
+   - Speed: Modify rotation += 0.02 value
+   - Segments: Change the loop count in the for loop
+
+4. Important Notes
+----------------
+- Component must be used with 'use client' directive
+- Requires useRef and useEffect hooks
+- Cleans up animation frame on unmount
+
+5. Making Changes
+---------------
+a) To change size:
+   - Update canvas.width and canvas.height
+   - Modify style={{ width: "400px", height: "400px" }}
+
+b) To adjust animation:
+   - Change rotation speed (0.02)
+   - Modify segment count (currently 3)
+
+c) To change colors:
+   - Update strokeStyle values
+   - Modify shadowColor for glow effect
+

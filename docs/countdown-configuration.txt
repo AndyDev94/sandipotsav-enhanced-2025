@@ -1,0 +1,42 @@
+SANDIPOTSAV 2025 - Countdown Configuration Guide
+==============================================
+
+Location: components/countdown.tsx
+
+1. Setting the Countdown Target
+-----------------------------
+Find the useState hook at the beginning of the Countdown component:
+
+const [timeLeft, setTimeLeft] = useState({
+  days: 37,    // Change this number
+  hours: 0,    // Change this number
+  minutes: 0,  // Change this number
+  seconds: 0   // Change this number
+})
+
+To set a specific target date:
+1. Calculate the difference between current date and target date
+2. Update the values accordingly
+3. The countdown will automatically stop at zero
+
+2. Customizing Appearance
+-----------------------
+- Box styling: Modify the className in the countdown boxes
+- Colors: Update the Tailwind color classes
+- Size: Adjust the min-w-[80px] values
+- Shadows: Modify the shadow-[] values
+
+3. Important Notes
+----------------
+- The countdown updates every second
+- When it reaches zero, it triggers the live stream button
+- All values automatically handle single/double digits
+- The component is fully responsive
+
+4. Testing
+---------
+To test countdown completion:
+1. Set small values (e.g., minutes: 1)
+2. Verify the live stream button appears
+3. Check all animations work correctly
+

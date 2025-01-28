@@ -1,0 +1,39 @@
+SANDIPOTSAV 2025 - Live Stream Configuration Guide
+===============================================
+
+Location: components/live-stream.tsx
+
+1. YouTube Stream Setup
+---------------------
+Find this line in the iframe src:
+src="https://www.youtube.com/embed/live_stream?channel=UCxxxxxxxxxxx"
+
+Replace UCxxxxxxxxxxx with:
+- Your YouTube Channel ID for channel live streams
+- Specific Video ID for individual streams
+- Custom YouTube embed URL for playlists
+
+2. Button Configuration
+---------------------
+The live stream button has two states:
+- Normal: Below countdown, smaller size
+- Countdown Complete: Larger, more prominent
+
+To modify:
+- Size: Update px-4/px-8 classes
+- Colors: Change bg-red-500 classes
+- Animation: Modify buttonVariants object
+
+3. Modal Customization
+--------------------
+- Size: Update max-w-4xl class
+- Aspect ratio: Modify aspect-video class
+- Background: Update bg-black class
+
+4. Testing Live Stream
+--------------------
+1. Use YouTube's test stream feature
+2. Verify embed permissions
+3. Test on multiple devices
+4. Check autoplay settings
+

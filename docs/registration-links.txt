@@ -1,0 +1,54 @@
+SANDIPOTSAV 2025 - Registration Links Configuration
+=============================================
+
+Location: Multiple Files
+
+1. Event Registration Links
+-------------------------
+File: components/sections/events-section.tsx
+
+const events = [
+  {
+    title: "Day 1",
+    formLink: "https://forms.gle/your-form-link-1", // Update this URL
+  },
+  // ... more events
+]
+
+2. Competition Registration Links
+------------------------------
+File: app/sandipotsav/competitions/page.tsx
+
+const competitions = [
+  {
+    category: "Technical Competitions",
+    items: [
+      {
+        name: "Hackathon",
+        registrationLink: "https://forms.gle/...", // Add your form URL
+      },
+      // ... more competitions
+    ]
+  }
+]
+
+3. Creating Google Forms
+----------------------
+1. Create form at forms.google.com
+2. Set up required fields:
+   - Name
+   - Email
+   - College/Institution
+   - Contact Number
+   - Event Selection
+3. Get sharing link
+4. Set appropriate permissions
+
+4. Best Practices
+---------------
+- Test all forms before publishing
+- Set up form notifications
+- Create response spreadsheets
+- Monitor registration counts
+- Set up auto-confirmation emails
+
