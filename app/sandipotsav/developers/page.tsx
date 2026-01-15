@@ -1,8 +1,14 @@
 "use client";
 
-import { ParallaxBackground } from "@/components/parallax-background"
-import Image from "next/image"
-import { motion } from "framer-motion"
+import dynamic from "next/dynamic";
+import { ParallaxBackground } from "@/components/parallax-background";
+import Image from "next/image";
+
+const MotionDiv = dynamic(
+  () => import("framer-motion").then((mod) => mod.motion.div),
+  { ssr: false }
+);
+
 
 const developers = [
   {
@@ -60,22 +66,24 @@ export default function DevelopersPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {developers.map((dev, index) => (
-              <motion.div
-                key={dev.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="p-6 rounded-xl backdrop-blur-sm bg-[#1E293B]/90 border border-[#FDB61A]/20 
-                  hover:border-[#FDB61A]/40 transition-all duration-300"
-              >
-                <h3 className="text-xl font-bold text-[#FDB61A] mb-2">{dev.name}</h3>
-                <p className="text-white mb-2">{dev.role}</p>
-                <p className="text-gray-300">{dev.contribution}</p>
-              </motion.div>
-            ))}
-          </div>
+         <div className="grid md:grid-cols-2 gap-8 mb-16">
+  {developers.map((dev, index) => (
+    <MotionDiv
+      key={dev.name}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.2 }}
+      className="p-6 rounded-xl backdrop-blur-sm bg-[#1E293B]/90 border border-[#FDB61A]/20 
+        hover:border-[#FDB61A]/40 transition-all duration-300"
+    >
+      <h3 className="text-xl font-bold text-[#FDB61A] mb-2">{dev.name}</h3>
+      <p className="text-white mb-2">{dev.role}</p>
+      <p className="text-gray-300">{dev.contribution}</p>
+    </MotionDiv>
+  ))}
+</div>
+
+        
 
           <div className="mt-16 text-center">
             <h2 className="text-2xl font-bold text-[#FDB61A] mb-6">{coordinationMessage.title}</h2>
