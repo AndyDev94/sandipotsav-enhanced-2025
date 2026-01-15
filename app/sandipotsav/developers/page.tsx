@@ -1,3 +1,7 @@
+"use client";
+
+export const dynamic = "force-dynamic";
+
 import { ParallaxBackground } from "@/components/parallax-background"
 import Image from "next/image"
 import { motion } from "framer-motion"
