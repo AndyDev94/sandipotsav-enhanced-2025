@@ -1,5 +1,6 @@
 "use client";
 
+
 export const dynamic = "force-dynamic";
 
 import { ParallaxBackground } from "@/components/parallax-background"
