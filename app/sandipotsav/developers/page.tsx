@@ -1,6 +1,14 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+const MotionDiv = dynamic(
+  () => import("framer-motion").then((mod) => mod.motion.div),
+  { ssr: false }
+);
+
 import { ParallaxBackground } from "@/components/parallax-background"
 import Image from "next/image"
-import { motion } from "framer-motion"
 
 const developers = [
   {
@@ -60,7 +68,8 @@ export default function DevelopersPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {developers.map((dev, index) => (
-              <motion.div
+              <MotionDiv>
+
                 key={dev.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -71,7 +80,8 @@ export default function DevelopersPage() {
                 <h3 className="text-xl font-bold text-[#FDB61A] mb-2">{dev.name}</h3>
                 <p className="text-white mb-2">{dev.role}</p>
                 <p className="text-gray-300">{dev.contribution}</p>
-              </motion.div>
+              <MotionDiv>
+
             ))}
           </div>
 
