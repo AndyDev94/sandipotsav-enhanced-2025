@@ -88,7 +88,6 @@ export default function DevelopersPage() {
         </div>
       </div>
 
-      {/* CSS-only animation (export-safe) */}
       <style jsx>{`
         @keyframes fadeUp {
           from {
