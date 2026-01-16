@@ -41,7 +41,8 @@ const developers = [
 
 const coordinationMessage = {
   title: "Message from the Coordination Committee",
-  content: `We are immensely proud of our development team who has worked tirelessly to bring SANDIPOTSAV 2025 to the digital realm.`,
+  content:
+    "We are immensely proud of our development team who has worked tirelessly to bring SANDIPOTSAV 2025 to the digital realm.",
   signature: "- SANDIPOTSAV 2025 Coordination Committee",
 };
 
@@ -55,6 +56,14 @@ export default function DevelopersPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 bg-gradient-to-r from-[#FDB61A] to-[#E5A417] text-transparent bg-clip-text">
             The Developers
           </h1>
+
+          <div className="text-center mb-16">
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Welcome to the story behind SANDIPOTSAV 2025's digital presence.
+              This website represents countless hours of dedication, creativity,
+              and collaborative effort from our talented team.
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {developers.map((dev, index) => (
